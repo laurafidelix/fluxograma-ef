@@ -159,7 +159,7 @@ function highlight(box) {
     }
     let id = box.id;
 
-    box.style.border = "1px solid rgba(234,116,19,1)";
+    box.style.border = "1px solid rgba(62, 4, 189, 1)";
 
     let arrows = document.getElementsByTagName("line");
     for(let a = 0; a < arrows.length; a++) {
