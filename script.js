@@ -1,6 +1,6 @@
 let boxFocused = undefined;
 let colourArray = ['#ffffff', '#f7aef8', '#d649cf', '#8b1bbd', '#3e04bd'];
-let currentYear = '2026'; // Ano padrão ao abrir a página
+let currentYear = '2027'; // Ano padrão ao abrir a página
 let currentData = {};
 
 function changeTab(year) {
