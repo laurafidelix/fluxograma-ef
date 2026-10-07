@@ -181,19 +181,18 @@ function highlightRecurseDown(id, depth) {
     
     for(let [key, value] of Object.entries(currentData)) {
         if(value["requisito"].includes(id)) {
-            let keyr = key.replaceAll(' ', '_');
-            let idr = id.replaceAll(' ', '_');
-            let lines = document.getElementsByClassName(keyr + ' ' + idr);
-            if(lines.length > 0) {
-                lines[0].style.opacity = 1; // Fica visível!
-                lines[0].style.stroke = colourArray[colourArray.length - depth] || '#3E04BD';
-                lines[0].style.strokeWidth = 3;
+            // A linha que conecta o pré-requisito (id) à matéria dependente (key) tem o ID (id + key)
+            let line = document.getElementById(id + key);
+            if(line) {
+                line.style.opacity = 1;
+                line.style.stroke = colourArray[colourArray.length - depth] || '#3e04bd';
+                line.style.strokeWidth = 3;
             }
             
             let keyEl = document.getElementById(key);
             if(keyEl) keyEl.style.opacity = 1;
             
-            highlightRecurseDown(key, depth+1);
+            highlightRecurseDown(key, depth + 1);
         }
     }
 }
