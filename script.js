@@ -1,5 +1,5 @@
 let boxFocused = undefined;
-let colourArray = ['#ffffff', '#fbc622', '#ff1f00', '#fab372', '#ffff88'];
+let colourArray = ['#ffffff', '#f7aef8', '#d649cf', '#8b1bbd', '#3e04bd'];
 let currentYear = '2026'; // Ano padrão ao abrir a página
 let currentData = {};
 
@@ -119,7 +119,7 @@ function drawArrows() {
 
                 if(!clone) {
                     clone = document.createElementNS("http://www.w3.org/2000/svg", "line");
-                    clone.setAttribute("style", "stroke: #EA7413; stroke-width: 2; opacity: 0; transition: opacity 0.2s ease-in-out;");
+                    clone.setAttribute("style", "stroke: #3E04BD; stroke-width: 2; opacity: 0; transition: opacity 0.2s ease-in-out;");
                     clone.setAttribute("marker-end", "url(#arrow)");
 
                     clone.classList.add(req.replaceAll(" ", "_"));
@@ -186,7 +186,7 @@ function highlightRecurseDown(id, depth) {
             let lines = document.getElementsByClassName(keyr + ' ' + idr);
             if(lines.length > 0) {
                 lines[0].style.opacity = 1; // Fica visível!
-                lines[0].style.stroke = colourArray[colourArray.length - depth] || '#EA7413';
+                lines[0].style.stroke = colourArray[colourArray.length - depth] || '#3E04BD';
                 lines[0].style.strokeWidth = 3;
             }
             
@@ -209,7 +209,7 @@ function highlightRecurse(id, height) {
         let lines = document.getElementsByClassName(idr + ' ' + parentr);
         if(lines.length > 0) {
             lines[0].style.opacity = 1; // Fica visível!
-            lines[0].style.stroke = colourArray[height] || '#EA7413';
+            lines[0].style.stroke = colourArray[height] || '#3E04BD';
             lines[0].style.strokeWidth = 3;
         }
         highlightRecurse(req, height + 1);
