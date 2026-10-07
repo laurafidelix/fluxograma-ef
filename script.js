@@ -119,11 +119,9 @@ function drawArrows() {
 
                 if(!clone) {
                     clone = document.createElementNS("http://www.w3.org/2000/svg", "line");
-                    clone.setAttribute("style", "stroke: #3E04BD; stroke-width: 2; opacity: 0; transition: opacity 0.2s ease-in-out;");
+                    clone.setAttribute("style", "stroke: #3e04bd; stroke-width: 2; opacity: 0; transition: opacity 0.2s ease-in-out;");
                     clone.setAttribute("marker-end", "url(#arrow)");
 
-                    clone.classList.add(req.replaceAll(" ", "_"));
-                    clone.classList.add(key.replaceAll(" ", "_"));
                     clone.setAttribute("id", req + key);
                 }
 
