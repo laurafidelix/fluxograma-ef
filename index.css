@@ -25,8 +25,8 @@ body {
 
 .tab-btn {
     background-color: #161616;
-    color: #EA7413;
-    border: 2px solid #EA7413;
+    color: #3E04BD;
+    border: 2px solid #3E04BD;
     padding: 10px 20px;
     font-size: 1em;
     font-weight: 600;
@@ -37,12 +37,12 @@ body {
 }
 
 .tab-btn:hover {
-    background-color: #EA7413;
+    background-color: #3E04BD;
     color: #ffffff;
 }
 
 .tab-btn.active {
-    background-color: #EA7413;
+    background-color: #3E04BD;
     color: #ffffff;
     box-shadow: 0 0 10px rgba(234, 116, 19, 0.5);
 }
@@ -83,7 +83,7 @@ h2 {
     margin-top: 0;
     margin-bottom: 0;
     padding: 0 12px;
-    color: #EA7413;
+    color: #3E04BD;
 }
 
 .rowContainer {
