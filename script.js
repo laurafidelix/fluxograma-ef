@@ -202,15 +202,17 @@ function highlightRecurse(id, height) {
     let el = document.getElementById(id);
     if(el) el.style.opacity = 1;
     
+    if(!currentData[id] || !currentData[id]["requisito"]) return;
+
     for(let a = 0; a < currentData[id]["requisito"].length; a++) {
         let req = currentData[id]["requisito"][a];
-        let idr = id.replaceAll(' ', '_');
-        let parentr = req.replaceAll(' ', '_');
-        let lines = document.getElementsByClassName(idr + ' ' + parentr);
-        if(lines.length > 0) {
-            lines[0].style.opacity = 1; // Fica visível!
-            lines[0].style.stroke = colourArray[height] || '#3E04BD';
-            lines[0].style.strokeWidth = 3;
+        
+        // Busca direta pelo ID da linha (req + id)
+        let line = document.getElementById(req + id);
+        if(line) {
+            line.style.opacity = 1;
+            line.style.stroke = colourArray[height] || '#3e04bd';
+            line.style.strokeWidth = 3;
         }
         highlightRecurse(req, height + 1);
     }
