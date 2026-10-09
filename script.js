@@ -173,13 +173,15 @@ function highlight(box) {
     highlightRecurse(id, 1);
 }
 
-function highlightRecurseDown(id, depth) {
+function highlightRecurseDown(id, depth, visited = new Set()) {
+    if (visited.has(id)) return;
+    visited.add(id);
+
     let el = document.getElementById(id);
     if(el) el.style.opacity = 1;
     
     for(let [key, value] of Object.entries(currentData)) {
         if(value["requisito"].includes(id)) {
-            // A linha que conecta o pré-requisito (id) à matéria dependente (key) tem o ID (id + key)
             let line = document.getElementById(id + key);
             if(line) {
                 line.style.opacity = 1;
@@ -190,12 +192,15 @@ function highlightRecurseDown(id, depth) {
             let keyEl = document.getElementById(key);
             if(keyEl) keyEl.style.opacity = 1;
             
-            highlightRecurseDown(key, depth + 1);
+            highlightRecurseDown(key, depth + 1, visited);
         }
     }
 }
 
-function highlightRecurse(id, height) {
+function highlightRecurse(id, height, visited = new Set()) {
+    if (visited.has(id)) return;
+    visited.add(id);
+
     let el = document.getElementById(id);
     if(el) el.style.opacity = 1;
     
@@ -204,14 +209,13 @@ function highlightRecurse(id, height) {
     for(let a = 0; a < currentData[id]["requisito"].length; a++) {
         let req = currentData[id]["requisito"][a];
         
-        // Busca direta pelo ID da linha (req + id)
         let line = document.getElementById(req + id);
         if(line) {
             line.style.opacity = 1;
             line.style.stroke = colourArray[height] || '#3e04bd';
             line.style.strokeWidth = 3;
         }
-        highlightRecurse(req, height + 1);
+        highlightRecurse(req, height + 1, visited);
     }
 }
 
