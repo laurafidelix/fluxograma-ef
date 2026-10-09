@@ -7,7 +7,7 @@ html, body {
 }
 
 body {
-    background-color: #303030;
+    background-color: #1A1A24;
     font-family: Inter, Arial;
     overflow-x: hidden;
 }
@@ -44,7 +44,7 @@ body {
 .tab-btn.active {
     background-color: #3E04BD;
     color: #ffffff;
-    box-shadow: 0 0 10px rgba(234, 116, 19, 0.5);
+    box-shadow: 0 0 10px rgba(62, 4, 189, 0.5);
 }
 
 /* --- ÁREA PRINCIPAL DO FLUXOGRAMA --- */
