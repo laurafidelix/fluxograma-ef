@@ -157,7 +157,7 @@ const curriculos = {
         "Estágio Supervisionado": { "periodo": 10, "requisito": ["Química Geral Experimental", "Fundamentos de Química para Engenharia I-B", "Cálculo IV", "Física III", "Cálculo I", "Estatística", "Geometria Analítica", "Álgebra Linear", "Física Experimental I", "Física Experimental III", "Física Experimental II", "Física Experimental IV", "Cálculo III", "Introdução à Ciência dos Materiais", "Química Inorgânica", "Computação Científica em Python", "Cálculo II", "Física I", "Física II", "Física IV", "Introdução à Engenharia Física", "Desenho Técnico e Projeto Assistido por Computador", "Processos de Fabricação"] }
     },
     
-    "2027": {
+"2027": {
         // --- 1º Período ---
         "Geometria Vetorial": { "periodo": 1, "requisito": [] },
         "Fundamentos de Matemática": { "periodo": 1, "requisito": [] },
@@ -203,13 +203,13 @@ const curriculos = {
         "Circuitos Elétricos - teoria e prática": { "periodo": 5, "requisito": ["Equações Diferenciais"] },
 
         // --- 6º Período ---
-        "Termodinâmica de Máquinas": { "periodo": 6, "requisito": ["Física Newtoniana", "Cálculo Diferencial e Integral"] },
+        "Termodinâmica de Máquinas": { "periodo": 6, "requisito": ["Cálculo Diferencial e Integral", "Física Newtoniana"] },
         "Tecnologias Limpas para Geração de Energia": { "periodo": 6, "requisito": [] },
         "Mecânica Quântica": { "periodo": 6, "requisito": ["Física Matemática", "Mecânica Clássica", "Óptica, Relatividade e Física moderna"] },
-        "Métodos Experimentais da Física II": { "periodo": 6, "requisito": ["Técnicas de Caracterização de Materiais", "Introdução à Ciência dos Materiais", "Óptica, Relatividade e Física moderna"] },
+        "Métodos Experimentais da Física II": { "periodo": 6, "requisito": ["Introdução à Ciência dos Materiais", "Óptica, Relatividade e Física moderna"] },
         "Projeto Integrado": { "periodo": 6, "requisito": ["Processos de Fabricação"] },
         "Seminários em Engenharia Física": { "periodo": 6, "requisito": [] },
-        "Técnicas de Caracterização de Materiais": { "periodo": 6, "requisito": ["Métodos Experimentais da Física II", "Introdução à Ciência dos Materiais", "Óptica, Relatividade e Física moderna"] },
+        "Técnicas de Caracterização de Materiais": { "periodo": 6, "requisito": ["Introdução à Ciência dos Materiais", "Óptica, Relatividade e Física moderna"] },
         "Eletrônica Fundamental e Aplicada": { "periodo": 6, "requisito": ["Circuitos Elétricos - teoria e prática"] },
 
         // --- 7º Período ---
